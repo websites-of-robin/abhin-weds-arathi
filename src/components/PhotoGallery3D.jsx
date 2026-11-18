@@ -4,49 +4,21 @@ import { Camera, Eye, X, Sparkles, MapPin } from 'lucide-react';
 export default function PhotoGallery3D() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-  // High quality curated aesthetic photo placeholders representing Kerala backwaters, temple, and romance
+  // Personal photographs from the couple's collection.
   const gallery = [
     {
       id: 1,
-      title: "Dawn on Vembanad Lake",
-      location: "Alleppey Backwaters, Kerala",
-      caption: "Tranquil morning mist mirroring our quiet beginnings on a traditional wooden boat.",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
+      title: "Together Is a Beautiful Place",
+      location: "A timeless Kerala portrait",
+      caption: "Wrapped in kasavu gold and all the warmth of home.",
+      image: "/images/couple-traditional.jpg",
     },
     {
       id: 2,
-      title: "Temple Chuttambalam Glow",
-      location: "Vadakkumnathan Temple, Thrissur",
-      caption: "Surrounded by thousand bronze lamps echoing the timeless blessings of centuries.",
-      image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      id: 3,
-      title: "Munnar Misty Hills",
-      location: "Tea Gardens, Munnar",
-      caption: "Emerald slopes and crisp highland breeze, celebrating shared laughs and endless walks.",
-      image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      id: 4,
-      title: "Kasavu Grace & Heritage",
-      location: "Kochi, Kerala",
-      caption: "Embracing our roots in timeless Kerala golden handloom weave.",
-      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      id: 5,
-      title: "Chinese Fishing Nets at Twilight",
-      location: "Fort Kochi Promenade",
-      caption: "Watching silhouettes of vintage cantilevers against the crimson Malabar sunset.",
-      image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80",
-    },
-    {
-      id: 6,
-      title: "Marine Drive Serenade",
-      location: "Marine Drive, Kochi",
-      caption: "Where our first conversation began over spiced Sulaimani and sweet promises.",
-      image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1000&q=80",
+      title: "Golden-Hour Promise",
+      location: "A garden in bloom",
+      caption: "A quiet moment, held in soft light and sweeter memories.",
+      image: "/images/couple-garden.jpg",
     }
   ];
 
@@ -68,14 +40,14 @@ export default function PhotoGallery3D() {
         </div>
 
         {/* 3D Parallax Tilt Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {gallery.map((photo) => (
             <div
               key={photo.id}
               onClick={() => setSelectedPhoto(photo)}
               className="group relative cursor-pointer rounded-2xl overflow-hidden border-2 border-amber-300/80 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white"
             >
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
+              <div className="relative h-[28rem] sm:h-[34rem] w-full overflow-hidden">
                 <img
                   src={photo.image}
                   alt={photo.title}

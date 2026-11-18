@@ -52,6 +52,17 @@ export default function CoupleStory() {
           </p>
         </div>
 
+        <figure className="relative max-w-xl mx-auto mb-16 rounded-3xl overflow-hidden border-2 border-amber-300/80 shadow-2xl bg-white kasavu-border kasavu-border-bottom">
+          <img
+            src="/images/couple-traditional.jpg"
+            alt="Abhin Rag and Arathi together in traditional Kerala attire"
+            className="block w-full max-h-[42rem] object-cover object-center"
+          />
+          <figcaption className="absolute inset-x-0 bottom-0 px-6 py-5 text-center bg-gradient-to-t from-stone-950/80 to-transparent text-amber-50 font-serif italic">
+            Together is a beautiful place to be.
+          </figcaption>
+        </figure>
+
         {/* 3D Couple Profile Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* Groom: Abhin Rag */}
